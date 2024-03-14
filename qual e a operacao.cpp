@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float num1, num2;
+    char operacao;
+
+    printf("Digite o primeiro valor: ");
+    scanf("%f", &num1);
+
+    printf("Digite o segundo valor: ");
+    scanf("%f", &num2);
+
+    printf("Digite a operacao desejada (+, -, *, /): ");
+    scanf(" %c", &operacao);
+    
+    switch (operacao) {
+        case '+':
+            printf("Resultado da soma: %.2f\n", num1 + num2);
+            break;
+        case '-':
+            printf("Resultado da subtracao: %.2f\n", num1 - num2);
+            break;
+        case '*':
+            printf("Resultado da multiplicacao: %.2f\n", num1 * num2);
+            break;
+        case '/':
+            if (num2 != 0) {
+                printf("Resultado da divisao: %.2f\n", num1 / num2);
+            } else {
+                printf("Erro: Divisao por zero!\n");
+            }
+            break;
+        default:
+            printf("Operacao invalida!\n");
+            break;
+    }
+
+    return 0;
+}
