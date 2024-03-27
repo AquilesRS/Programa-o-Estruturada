@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main(){
+int idades, soma_idades=0, qtde_idades, cont;
+float media;
+	
+setlocale(LC_ALL, "Portuguese");
+
+printf("Quantas idades serão utilizadas?");
+scanf ("%i", &qtde_idades);
+for (cont = 1; cont <= qtde_idades; cont++)
+	{
+			printf("Entre com a idade %d : ",cont);
+			scanf("%i", &idades);
+			
+			soma_idades = soma_idades + idades;
+	}
+
+media = soma_idades / qtde_idades;
+printf("\nA média das idades é igual a %.2f\n", media);
+}
