@@ -1,2 +1,2 @@
-# Programaco-Estruturada
+# Programacao-Estruturada
 DevC++5.11
