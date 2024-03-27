@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int valor;
+
+    printf("Digite um valor inteiro entre 1 e 10: ");
+    scanf("%d", &valor);
+
+
+    if (valor < 1 || valor > 10) {
+        printf("O valor inserido está fora do intervalo permitido.\n");
+        return 1;
+    }
+
+
+    printf("Tabuada de %d:\n", valor);
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", valor, i, valor * i);
+    }
+
+    return 0;
+}
