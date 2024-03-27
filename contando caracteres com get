@@ -1,0 +1,15 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+	char nome [30];
+	int B;
+	printf ("informe um nome: ");
+	gets(nome); // A função gets armazena tudo que foi digitado, inclusive o espaço.
+	
+	for(B=0;B<=3;B++)
+	
+	printf("%c", nome[B]);
+	
+}
