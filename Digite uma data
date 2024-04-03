@@ -1,0 +1,50 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+	int dia, mes, ano;
+	printf("Digite uma data no formato dd/mm/aaaa");
+	scanf("%i/%i/%i", &dia, &mes, &ano);
+	
+	switch(mes){
+		case 1:
+			printf("%02d de janeiro de %d\n", dia, ano);
+			break;
+		case 2:
+			printf("%02d de fevereiro de %d\n", dia, ano);
+				break;
+		case 3:
+			printf("%02d de março de %d\n", dia, ano);
+					break;
+		case 4:
+			printf("%02d de abril de %d\n", dia, ano);
+							break;
+		case 5:
+			printf("%02d de maio de %d\n", dia, ano);
+								break;
+		case 6:
+			printf("%02d de junho de %d\n", dia, ano);
+									break;
+		case 7:
+			printf("%02d de julho de %d\n", dia, ano);
+										break;
+		case 8:
+			printf("%02d de agosto de %d\n", dia, ano);
+											break;
+		case 9:
+			printf("%02d de setembro de %d\n", dia, ano);
+												break;
+		case 10:
+			printf("%02d de outubro de %d\n", dia, ano);
+													break;
+		case 11:
+			printf("%02d de novembro de %d\n", dia, ano);
+														break;
+		case 12:
+			printf("%02d de dezembro de %d\n", dia, ano);
+		default:
+			printf("Mês inválido.\n");									
+			break;
+	}
+	return 0;	
+}
