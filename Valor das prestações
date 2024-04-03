@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    float preco_produto;
+    int forma_pagamento;
+    float valor_total;
+    int numero_prestacoes;
+    float valor_prestacao;
+
+
+    printf("Digite o preco do produto: ");
+    scanf("%f", &preco_produto);
+
+    printf("Digite o numero de parcelas para efetuar o pagamento:\n");
+    printf("1 - A vista (parcela unica)\n");
+    printf("2 - Em duas vezes\n");
+    printf("3 - Em tres vezes\n");
+    printf("4 - Em quatro vezes\n");
+    scanf("%d", &forma_pagamento);
+
+
+    switch (forma_pagamento) {
+        case 1:
+            valor_total = preco_produto * 0.7;
+            numero_prestacoes = 1;
+            valor_prestacao = valor_total;
+            break;
+        case 2:
+            valor_total = preco_produto; 
+            numero_prestacoes = 2;
+            valor_prestacao = valor_total / numero_prestacoes;
+            break;
+        case 3:
+            valor_total = preco_produto; 
+            numero_prestacoes = 3;
+            valor_prestacao = valor_total / numero_prestacoes;
+            break;
+        case 4:
+            valor_total = preco_produto; 
+            numero_prestacoes = 4;
+            valor_prestacao = valor_total / numero_prestacoes;
+            break;
+        default:
+            printf("Código inválido.\n");
+            return 1;
+    }
+
+    
+    printf("Numero de prestacoes: %d\n", numero_prestacoes);
+    printf("Valor de cada prestacao: R$%.2f\n", valor_prestacao);
+
+    return 0;
+}
