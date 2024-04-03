@@ -1,0 +1,42 @@
+/* Desenvolva um sistema para calcular o salário Liquido de um funcionário, lembrando que:
+Salário liquido = Bruto - IR(Imposto de Renda)
+Salário Bruto = Salário base + gratificação
+Se salário Bruto < = 1000, IR = salário bruto * (15/100)
+Se salário Bruto > 1000, IR = salário bruto * (20/100)  */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+  float SB, G, IR, SL; 
+
+
+  setlocale(LC_ALL, "portuguese");
+
+ 
+  printf("Digite o salário base: R$");
+  scanf("%f", &SB);
+  printf("Digite a gratificação: R$");
+  scanf("%f", &G);
+
+
+  SB += G;
+
+
+  if (SB <= 1000.0) {
+    IR = SB * 0.15;
+  } else {
+    IR = SB * 0.20;
+  }
+
+
+  SL = SB - IR;
+
+
+  printf("\nSalário bruto: R$%.2f\n", SB);
+  printf("Imposto de renda: R$%.2f\n", IR);
+  printf("Salário líquido: R$%.2f\n", SL);
+
+  return 0;
+}
