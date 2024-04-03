@@ -1,0 +1,51 @@
+/* Desenvolva um programa em C que simula um menu de opções para o usuário e utiliza a estrutura
+de controle switch case para realizar diferentes ações com base na opção escolhida.
+Neste código, usamos um loop do-while para exibir continuamente o menu de opções até o usuário
+escolha a opção sair (opção 3). Dentro do loop, usamos um bloco switch case para realizar 
+diferentes ações com base na opção inválida, uma mensagem será exibida indicando isso.*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+  int opcao;
+
+
+  setlocale(LC_ALL, "portuguese");
+
+
+  do {
+
+    printf("\n**Menu de Opções**\n");
+    printf("1. Opção 1\n");
+    printf("2. Opção 2\n");
+    printf("3. Sair\n");
+    printf("Digite a opção desejada: ");
+
+
+    scanf("%d", &opcao);
+
+
+    switch (opcao) {
+    case 1:
+    
+      printf("Você escolheu a opção 1!\n");
+      break;
+    case 2:
+   
+      printf("Você escolheu a opção 2!\n");
+      break;
+    case 3:
+    
+      printf("Saindo do programa...\n");
+      break;
+    default:
+    
+      printf("Opção inválida. Digite um número entre 1 e 3.\n");
+    }
+  } while (opcao != 3);
+
+  return 0;
+}
