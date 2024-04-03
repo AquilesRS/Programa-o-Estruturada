@@ -1,0 +1,39 @@
+/*1- João papo-de-pescador, homem de bem, comprou um microprocessador para controlar o rendimento diário do seu trabalho.
+Toda vez que ele traz um peso de peixe maior que o estabelecido pelo regulamento de pesca do estado de Saão Paulo (50 quilos)
+deve pagar uma multa de R$4,00 por quilo excedente. João precisa que desenvolva um sistema que leia a variável P(peso de peixe)
+e verifique se á excesso. Se houver, gravar na variável E (execesso) e na variável M o valor da multa que João deverá pagar.
+Caso contrário mostrar tais variáveis com o conteúdo ZERO.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+  float P; 
+  int E; 
+  float M; 
+
+
+  setlocale(LC_ALL, "portuguese");
+
+
+  printf("Digite o peso do peixe (em kg): ");
+  scanf("%f", &P);
+
+
+  if (P > 50.0) {
+    E = P - 50.0;
+    M = E * 4.0;
+  } else {
+ 
+    E = 0;
+    M = 0.0;
+  }
+
+ 
+  printf("\nPeso do peixe: %.2f kg\n", P);
+  printf("Excesso de peso: %d kg\n", E);
+  printf("Valor da multa: R$%.2f\n", M);
+
+  return 0;
+}
