@@ -1,0 +1,27 @@
+/* Desenvolva um sistema que calcula a soma dos números de 1 a 100 e imprime o resultado.
+O programa deverá utilizar um loop for para iterar de 1 a 100 e soma os números em cada iteração.
+Depois que o loop terminar, imprime o resultado de soma.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+  int i, soma;
+
+
+  setlocale(LC_ALL, "portuguese");
+
+
+  soma = 0;
+
+
+  for (i = 1; i <= 100; i++) {
+    soma += i;
+  }
+
+
+  printf("A soma dos números de 1 a 100 é: %d\n", soma);
+
+  return 0;
+}
